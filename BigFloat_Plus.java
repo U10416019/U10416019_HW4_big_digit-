@@ -98,5 +98,40 @@ public class BigFloat_Plus{
 			totalFloat.add(firstFloat.get(i) + secondFloat.get(i));
 		}
 	}
-
+	
+	//create a mutator to add 1 when the arraylist number is over than 10 before the dot
+	public void setPlusTotalInt(){
+		for(int i = 0; i < totalInt.size() - 1; i++){
+			if(totalInt.get(i) >= 10){
+				totalInt.set(i + 1, totalInt.get(i + 1) + 1);
+				totalInt.set(i, totalInt.get(i) % 10);
+			}
+		}
+	}
+	
+	//create a mutator to add 1 when the arraylist number is over than 10 after the dot
+	public void setPlusTotalFloat(){
+		for(int i = totalFloat.size() - 1; i > 0; i--){
+			if(totalFloat.get(i) >= 10){
+				totalFloat.set(i - 1, totalFloat.get(i - 1) + 1);
+				totalFloat.set(i, totalFloat.get(i) % 10);
+			}
+		}
+		
+		if(totalFloat.get(0) >= 10){
+			totalFloat.set(0, totalFloat.get(0) % 10);
+			totalInt.set(0, totalInt.get(0) + 1);
+		}
+	}
+	
+	//create a mutator print the total
+	public void printTotal(){
+		for(int i = totalInt.size() - 1; i >= 0; i--){
+			System.out.print(totalInt.get(i));
+		}
+		System.out.print(".");
+		for(int i = 0; i < totalFloat.size(); i++){
+			System.out.print(totalFloat.get(i));
+		}
+	}
 }
