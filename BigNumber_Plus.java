@@ -55,5 +55,22 @@ public class BigNumber_Plus{
 			total.add(first.get(i) + second.get(i));
 		}
 	}
-
+	
+	//create a mutator to add 1 when the arraylist number is over than 10
+	public void setPlusTotal(){
+		//determine whether the number of the arraylist is over than 10
+		for(int i = 0; i < total.size() -1; i++){
+			if(total.get(i) >= 10){
+				total.set(i + 1, total.get(i+1) + 1);
+				total.set(i, total.get(i) % 10);
+			}
+		}
+	}
+	
+	//create a mutator to print the total
+	public void printTotal(){
+		for(int i = total.size() - 1; i >= 0; i--){
+			System.out.print(total.get(i));
+		}
+	}
 }
