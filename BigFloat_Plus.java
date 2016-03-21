@@ -26,5 +26,33 @@ public class BigFloat_Plus{
 		setPlusTotalFloat();
 		setPlusTotalInt();
 	}
+	
+	//create a mutator to let the first string become integer and add them in arraylist before the dot
+	void setFirstInt(){
+		for(int i = firstNumber.indexOf(".") - 1; i >= 0; i--){
+			firstInt.add(Integer.valueOf(String.valueOf(firstNumber.charAt(i))));
+		}
+	}
+	
+	//create a mutator to let the second string become integer and add them in arraylist before the dot
+	void setSecondInt(){
+		for(int i = secondNumber.indexOf(".") - 1; i >= 0; i--){
+			secondInt.add(Integer.valueOf(String.valueOf(secondNumber.charAt(i))));
+		}
+	}
+
+	//create a mutator to let the first string become integer and add them in arraylist after the dot
+	void setFirstFloat(){
+		for(int i = firstInt.size() + 1; i < firstNumber.length(); i++){
+			firstFloat.add(Integer.valueOf(String.valueOf(firstNumber.charAt(i))));
+		}
+	}
+	
+	//create a mutator to let the second string become integer and add them in arraylist after the dot
+	void setSecondFloat(){
+		for(int i = secondInt.size()+1; i < secondNumber.length(); i++){
+			secondFloat.add(Integer.valueOf(String.valueOf(secondNumber.charAt(i))));
+		}
+	}
 
 }
