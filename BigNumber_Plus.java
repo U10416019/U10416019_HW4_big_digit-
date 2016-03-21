@@ -33,5 +33,27 @@ public class BigNumber_Plus{
 			second.add(Integer.valueOf(String.valueOf(secondNumber.charAt(i))));
 		}
 	}
+	
+	//create a mutator to add two arraylist
+	public void setTotal(){
+		//determine which string is longer
+		//if the second string is smaller then add 0 util its length is the same with the first string
+		if(firstNumber.length() > secondNumber.length()){
+			for(int i = secondNumber.length(); i < firstNumber.length(); i++){
+				second.add(0);
+			}
+		}
+		//if the first string is smaller then add 0 util its length is the same with the second string
+		else if(secondNumber.length() > firstNumber.length()){
+			for(int i = firstNumber.length(); i < secondNumber.length(); i++){
+				first.add(0);
+			}
+		}
+		
+		//add the first and second arraylist
+		for(int i = 0; i < first.size(); i++){
+			total.add(first.get(i) + second.get(i));
+		}
+	}
 
 }
