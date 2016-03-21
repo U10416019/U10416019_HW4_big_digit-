@@ -13,6 +13,14 @@ public class TestBigNumber_Plus{
 		String firstNumber = input.next();
 		System.out.println("Second number : ");
 		String secondNumber = input.next();
-
+		
+		//create a variable plus to call BigNumber_Plus class
+		BigNumber_Plus plus = new BigNumber_Plus(firstNumber, secondNumber);
+		
+		//print the total
+		System.out.print("The total is : ");
+		plus.printTotal();
+		System.out.println("");
+		
 	}
 }
