@@ -19,5 +19,19 @@ public class BigNumber_Plus{
 		setTotal();
 		setPlusTotal();
 	}
+	
+	//create a mutator to let the first string become integer and add them in arraylist
+	void setFirstNumber(){
+		for(int i = firstNumber.length()-1; i >= 0; i--){
+			first.add(Integer.valueOf(String.valueOf(firstNumber.charAt(i))));
+		}
+	}
+	
+	//create a mutator to let the second string become integer and add them in arraylist
+	void setSecondNumber(){
+		for(int i = secondNumber.length()-1; i >= 0; i--){
+			second.add(Integer.valueOf(String.valueOf(secondNumber.charAt(i))));
+		}
+	}
 
 }
