@@ -13,6 +13,13 @@ public class TestBigFloat_Plus{
 		String firstNumber = input.next();
 		System.out.println("Second number : ");
 		String secondNumber = input.next();
-
+		
+		//create a variable plus to call BigFloat_Plus class
+		BigFloat_Plus plus = new BigFloat_Plus(firstNumber, secondNumber);
+		
+		//print the total
+		System.out.print("The total is : ");
+		plus.printTotal();
+		System.out.println("");
 	}
 }
